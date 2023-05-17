@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShegerShop - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        header ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        header ul li a:hover {
+            color: #f00;
+        }
+
+        #cart {
+            padding: 40px;
+            text-align: center;
+        }
+
+        #cart h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .cart-items {
+            margin-top: 30px;
+        }
+
+        .cart-total {
+            margin-top: 40px;
+        }
+
+        .cart-total h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .cart-total span {
+            font-weight: bold;
+            color: #f00;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f00;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff5050;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        section#about {
+            padding: 2rem;
+            text-align: center;
+            color: #333;
+        }
+
+        h1#welcome-heading {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h1#destination-text1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #007bff;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        i {
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="index.html" class="logo">ShegerShop</a>
+            <ul class="menu">
+                <li ><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href = "cart.html"> Your Cart</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="no-products-section">
+        <div class="no-products-content">
+          <h2>No Products Available</h2>
+          <p>Sorry, we couldn't find any products that match your search key.</p>
+          <p>Please try searching for something else or explore our products.</p>
+          <button class="explore-button">Explore Products</button>
+        </div>
+
+        <img class="cropped-image" style="width: 800px; margin-top: -100px;" src="https://cdn.dribbble.com/users/547471/screenshots/3063720/not_found.gif" alt="No Products Animation">
+
+
+        <img style="height: 50px; width: 50px; margin-top: -100px; " src="https://www.foredom.net/wp-content/uploads/loading-spinner.gif" alt="No Products Animation">
+
+      </section>
+      
+      <style>
+        .no-products-section {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding-top: 20px;
+          text-align: center;
+        }
+      
+        .no-products-content {
+          margin-bottom: 0px;
+        }
+      
+        .explore-button {
+          padding: 10px 20px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      
+        .explore-button:hover {
+          background-color: #45a049;
+        }
+      
+        .no-products-image img {
+          width: 300px;
+          height: 300px;
+          animation: rotate 2s linear infinite;
+        }
+      
+        @keyframes rotate {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      </style>
+      
+      <script>
+        const exploreButton = document.querySelector('.explore-button');
+      
+        exploreButton.addEventListener('click', () => {
+          // Perform the action when the button is clicked
+          // E.g., redirect to the featured products page
+          window.location.href = 'products.html';
+        });
+      </script>
+      
+    <footer id="footer">
+        <p>&copy; 2023 ShegerShop. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShegerShop - Your Ultimate Shopping Destination</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS file -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Nunito:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS for desktop screens */
+    @media (min-width: 1024px) {
+      .featured-products .product-card img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    /* CSS for tablet screens */
+    @media (max-width: 1023px) {
+      .featured-products .product-card img {
+        max-width: 80%;
+        height: auto;
+      }
+    }
+
+    /* CSS for phone screens */
+    @media (max-width: 768px) {
+      .featured-products .product-card img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    /* CSS for testimonial carousel */
+    .testimonial-carousel {
+      display: flex;
+      overflow: hidden;
+    }
+
+    .testimonial {
+      flex: 0 0 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .testimonial.active {
+      transform: translateX(-100%);
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="overlay" id="overlay">
+    <div class="popup">
+      <h3>Alert!</h3>
+      <p>Oops! You're not logged in.</p>
+      <button class="button1 closeAlert">Close</button>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <!-- Navigation Menu -->
+    <nav>
+      <!-- Logo -->
+      <a href="index.html" class="logo">ShegerShop</a>
+
+      <!-- Menu Items -->
+      <ul class="menu">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Your Cart</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 id="welcome-heading">Welcome to ShegerShop</h1>
+      <p id="destination-text">Your ultimate destination for online shopping.</p>
+      
+      <a href="products.html" class="cta-button">Explore Now</a>
+    </section>
+    
+    <!-- Search Bar Section -->
+    <div class="search-bar-container">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products..." required>
+        <button id="green-button" onclick="openNoProductsPage()">Search</button>
+
+              </div>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <!-- Display featured product cards -->
+      <div class="product-carousel">
+        <div class="product-card">
+          <img src="Untitled - Copy.png" alt="Product 1">
+          <p>"Trust is built on exceptional service." - Albert Einstein</p>
+        </div>
+        <div class="product-card">
+          <img src="Untitled2.png" alt="Product 2">
+          <p>"Quality is not an act, it is a habit." - Aristotle</p>
+        </div>
+        <div class="product-card">
+          <img src="Untitled2 - Copy (2).png" alt="Product 1">
+          <p>"Trust is built on exceptional service." - Albert Einstein</p>
+        </div>
+        <div class="product-card">
+          <img src="Untitled2 - Copy (3).png" alt="Product 2">
+          <p>"Quality is not an act, it is a habit." - Aristotle</p>
+        </div>
+      </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials" id="tests">
+        <h2>What Our Customers Say</h2>
+        <!-- Display customer testimonials -->
+        <div class="testimonial-carousel">
+          <div class="testimonial active" id="tests-inside-unused">
+            <p>"I am extremely satisfied with my shopping experience at ShegerShop. The quality of products and the prompt customer service exceeded my expectations. Highly recommended!"</p>
+            <p class="customer-name">- Happy Customer</p>
+            <p>"I am extremely satisfied with my shopping experience at ShegerShop. The quality of products and the prompt customer service exceeded my expectations. Highly recommended!"</p>
+            <p class="customer-name">- Happy Customer</p>
+          </div>
+          <div class="testimonial" id="tests-inside">
+            <p>"ShegerShop has become my go-to online store for all my shopping needs. The wide range of products, competitive prices, and hassle-free delivery make it the best choice for any shopper."</p>
+            <p class="customer-name">- Happy Customer</p>
+            <p>"I am extremely satisfied with my shopping experience at ShegerShop. The quality of products and the prompt customer service exceeded my expectations. Highly recommended!"</p>
+            <p class="customer-name">- Another Happy Customer</p>
+          </div>
+        </div>
+      </section> 
+</main>
+<!-- Footer Section -->
+<footer id="footer">
+  <p>&copy; 2023 ShegerShop. All rights reserved.</p>
+</footer>
+<script src="script.js"></script> <!-- Linking external JavaScript file -->
+<script>
+  // JavaScript for testimonial carousel
+  const testimonials = document.querySelectorAll('.testimonial');
+  let activeTestimonial = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+    testimonials[index].classList.add('active');
+  }
+
+  function nextTestimonial() {
+    activeTestimonial++;
+    if (activeTestimonial >= testimonials.length) {
+      activeTestimonial = 0;
+    }
+    showTestimonial(activeTestimonial);
+  }
+
+  setInterval(nextTestimonial, 4000); // Slide every 4 seconds
+          function openNoProductsPage() {
+            window.location.href = "noproducts.html";
+          }
+
+</script>
+</body>
+</html>

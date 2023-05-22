@@ -10,6 +10,16 @@
 <body>
     <header>            <a href="index.html" class="logo">ShegerShop</a>
     </header>
+    
+            <div class="overlay" id="overlay">
+      <div class="popup">
+        <h3>Alert</h3>
+        <p>We're sorry, Login temporarily unavailable. Thanks for your patience.
+          </p>
+        <button class="button1 closeAlert">Close</button>
+      </div>
+    </div>
+
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
@@ -35,7 +45,7 @@
                                 <label for="confirmPassword">Confirm Password</label>
                                 <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                            <button type="submit" class="btn btn-primary btn-block showAlert">Sign Up</button>
                         </form>
                     </div>
                     <div class="card-footer text-center">
